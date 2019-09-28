@@ -13,9 +13,12 @@ public class Main {
 //                .request(MediaType.APPLICATION_JSON_TYPE)
 //                .get(new GenericType<List<Widget>>() {});
 
+        User user = new User();
+        String id = user.prompt();
         Client client = ClientBuilder.newBuilder().register(JacksonFeature.class).build();
 
-//        List<widget> widgets = client
+
+//        List<widget> widgets = client.target("http://example.com/webapi/read")
 //                .path("/widgets")
 //                .request(MediaType.APPLICATION_JSON_TYPE)
 //                .get(new GenericType<List<Widget>>() {});
